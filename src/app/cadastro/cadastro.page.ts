@@ -36,7 +36,7 @@ export class CadastroPage implements OnInit {
     console.log(nome.value);
     console.log(email.value);
     console.log(genero.value);
-    this.router.navigate(["usuario"]);
+    this.router.navigate(["ferramenta"]);
   }
 
 }
