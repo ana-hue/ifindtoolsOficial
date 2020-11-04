@@ -1,0 +1,77 @@
+.header {
+    height: 200px;
+}
+.post-box {
+    width: 90%;
+    height: 150px;
+    background: #fff;
+    display: block;
+    margin: 15px auto;
+    border-radius: 10px;
+}
+.post-title {
+    text-align: center;
+    margin: 10px auto;
+    font-weight: bold;
+}
+.post-p {
+    text-align: center;
+    margin: -5px auto;
+    font-size: 14px;
+    opacity: .7;
+}
+.tempo {
+    text-align: center;
+    opacity: .7;
+    font-size: 14px;
+    margin: 20px 0  auto auto
+}
+.stts {
+    display: flex;
+    height: 25px;
+    position: relative;
+    margin-top: -10px
+}
+.stts ul {
+    color: #77D353;
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute;
+    left: 0px;
+}
+.stts .price {
+    color: #77D353;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    font-weight: bold;
+}
+.stts .chat {
+    font-size: 14px;
+    position: absolute;
+    right: 25px;
+}
+.desc {
+    width: 95%;
+    height: 200px;
+    background: #EDEDED;
+    border-radius: 10px;
+    margin: 20px auto;
+}
+.desc h4 {
+    text-align: center;
+    font-weight: bold;
+}
+.desc p {
+    font-size: 14px;
+    text-align: left;
+    padding: 0 10px;
+    width: 100%;
+}
+
+.logoIfind {
+    margin-left: 3%;
+    margin-right: 5%;
+    width: 62%;
+}

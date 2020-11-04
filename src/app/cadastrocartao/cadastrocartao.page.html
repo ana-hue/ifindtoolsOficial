@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button class="cor"></ion-menu-button>
+    </ion-buttons>
+    <img src="../assets/logos/logo.png"  class="logo"/>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid>
+  <ion-row>
+    <ion-col>
+  
+      <p class="alerta-quasela">Estamos quase lá!<br /> Agora só falta o CPF e os termos, mas o CPF não é obrigatorio até houver negociações!</p>
+
+      <ion-item>
+        <ion-label position="floating">CPF</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+
+        <ion-checkbox color="light"></ion-checkbox>
+        <ion-label class="termosDeUso">Eu aceito todos os termos de uso</ion-label>
+      
+      <ion-button [routerLink]="['/usuario'] " class="enviar" expand="block" size="default" color="dark" >Cadastrar</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+</ion-content>

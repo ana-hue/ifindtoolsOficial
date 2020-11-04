@@ -1,0 +1,94 @@
+<ion-header>
+
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+          <ion-icon name="arrow-back" class="cor" [routerLink]="['/ferramenta']"></ion-icon>
+        <!-- <img src="../assets/icon/setinha.png" -->  
+        </ion-buttons>
+        <img src="../assets/logos/logo.png" class="logo"/>
+      </ion-toolbar>
+      
+</ion-header>
+
+<ion-content>
+
+    <ion-content>
+      
+      <form (ngSubmit)="onFormSubmit(form)" #form="ngForm">
+        <ion-grid>
+        <ion-row>
+          <ion-col>
+      
+            <ion-item>
+                <ion-label position="floating">Nome</ion-label>
+                <ion-input value="proprietario"  required readonly></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Nome Ferramenta</ion-label>
+                <ion-input value="Furadeira 2k" ngModel nome="nome" required ></ion-input>
+            </ion-item>
+      
+            <ion-grid>
+                <ion-row>
+                  <ion-col>
+                      <ion-item>
+                          <ion-label position="floating" >Preço</ion-label>
+
+                          <ion-select interface="popover" ngModel name="preco" required>
+                              <ion-select-option value="dez">R$10,00</ion-select-option>
+                              <ion-select-option value="doze">R$12,00</ion-select-option>
+                              <ion-select-option value="quinze">R$15,00</ion-select-option>
+                              <ion-select-option value="dezoito">R$18,00</ion-select-option>
+                              <ion-select-option value="vinte">R$20,00</ion-select-option>
+                              <ion-select-option value="duzentos">R$200,00</ion-select-option>
+                            </ion-select>
+                      </ion-item>
+                  </ion-col>
+                  <ion-col>
+                      <ion-item>
+                          <ion-label position="floating">Dias</ion-label>
+                          <ion-select interface="popover" ngModel name="dia" required>
+                              <ion-select-option value="1dia">1 Dias</ion-select-option>
+                              <ion-select-option value="2dia">2 Dias</ion-select-option>
+                              <ion-select-option value="3dia">3 Dias</ion-select-option>
+                              <ion-select-option value="4dia">4 Dias</ion-select-option>
+                              <ion-select-option value="5dia">5 Dias</ion-select-option>
+                              <ion-select-option value="6dia">6 Dias</ion-select-option>
+                            </ion-select>
+                      </ion-item>
+                    </ion-col>
+                  </ion-row>
+            </ion-grid>
+
+
+           
+
+            
+      
+            <ion-item class="desc">
+                <ion-textarea rows="4" ngModel name="descricao" placeholder="Deixa a descrição da sua ferramenta aqui..." minlength="10" required></ion-textarea>
+              </ion-item>
+      
+              <div class="upload-area">
+                  <label class="upload" for="arquivo">
+                    <ion-icon name="folder-outline"></ion-icon>
+                    Escolher arquivos
+                  </label>
+                  <input id="arquivo" type="file">
+                </div>
+            
+            <ion-button class="enviar" size="default" color="dark" expand="block" (click)="anuncio(nome, preco, dia, descricao)">Postar</ion-button>
+      
+            
+      
+          </ion-col>
+      
+          
+        </ion-row>
+      </ion-grid>
+      
+    </form>
+      </ion-content>
+
+</ion-content>

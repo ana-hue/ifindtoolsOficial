@@ -1,0 +1,48 @@
+<ion-header [translucent]="true" class="header" color="primary">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button ></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-avatar>
+    <img src="../../assets/perfil/semperfilimg.png">
+  </ion-avatar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<div id="container">
+  <strong>{{ nome }}</strong>
+  <p>{{ emailusuario }}</p>
+  <div class="info">
+    <p>{{ idade }}</p>
+    <p>{{ sexo }}</p>
+  </div>
+  <div class="classificacao">
+    <ion-icon name="star-outline"></ion-icon>
+    <ion-icon name="star-outline"></ion-icon>
+    <ion-icon name="star-outline"></ion-icon>
+    <ion-icon name="star-outline"></ion-icon>
+    <ion-icon name="star-outline"></ion-icon>
+  </div>
+</div>
+<div id="container2">
+  <spam></spam>
+  <p class="allposts">Todas as postagens</p>
+
+  <div class="product">
+    <ion-avatar>
+      <img src="../../assets/perfil/noimgproduct.png" />
+    </ion-avatar>
+    <strong>Nome do produto</strong>
+
+    <div class="product-info">
+      <div class="days">
+        <ion-icon name="time-outline"></ion-icon>
+        <p>Por x dias</p>
+      </div>
+      <p class="preco">R$xx,xx</p>
+    </div>
+  </div>
+</div>
+
+</ion-content>
