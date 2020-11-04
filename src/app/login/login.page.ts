@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../shared/auth.service';
 import { Router } from '@angular/router';
-import { MenuController } from "@ionic/angular";
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -10,8 +10,7 @@ import { MenuController } from "@ionic/angular";
 })
 export class LoginPage implements OnInit {
 
-  constructor(public authService: AuthService, public router: Router,
-              public menuController: MenuController) { }
+  constructor(public authService: AuthService, public router: Router, public menuCtrl: MenuController) { }
 
   ngOnInit() {
   }
@@ -43,7 +42,6 @@ export class LoginPage implements OnInit {
   }
 
   ionViewWillEnter(){
-    this.menuController.enable(false);
+    this.menuCtrl.enable(false);
   }
-
 }

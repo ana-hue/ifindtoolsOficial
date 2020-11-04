@@ -1,37 +1,32 @@
-<ion-header>
-    <ion-toolbar color="primary">
-      <img src="../assets/logos/logo.png" class="logo" />
-    </ion-toolbar>
-  </ion-header>
+<ion-content color="primary">
 
-  <ion-content>
-    <form class="content-login">
-      <ion-grid>
-        <ion-row>
+  <ion-grid class="grid">
+    <img src="../assets/logos/logo.png" class="logo" />
+    <ion-row>
+
+      <ion-col>
+
+        <ion-item color="termosDeUso">
+          <ion-label position="floating">E-mail</ion-label>
+          <ion-input type="E-mail" #email required></ion-input>
+        </ion-item>
+
+
+        <ion-item color="termosDeUso">
+          <ion-label position="floating">Senha</ion-label>
+          <ion-input type="password" #password required></ion-input>
+        </ion-item>
+
+
+        <ion-button class="enviar" (click)="logIn(email, password)" size="default" color="light" expand="block"
+          [routerLink]="['/ferramenta'] ">Logar
+        </ion-button>
+
+      </ion-col>
+
+    </ion-row>
+        <p><a class="botCadastro" [routerLink]="['/cadastro'] ">Cadastre-se aqui!</a> <a class="esqueceuSenha" [routerLink]="['/..'] ">Esqueceu a Senha?</a></p>
     
-          <ion-col>
-    
-            <ion-item>
-              <ion-label position="floating">E-mail</ion-label>
-              <ion-input type="E-mail" #email required></ion-input>
-            </ion-item>
-    
-    
-            <ion-item>
-              <ion-label position="floating">Senha</ion-label>
-              <ion-input type="password" #password required></ion-input>
-            </ion-item>
-    
-    
-    
-            <ion-button class="enviar" (click)="logIn(email, password)" size="default" color="dark" expand="block">Logar
-            </ion-button>
-    
-          </ion-col>
-    
-        </ion-row>
-      </ion-grid>
-    
-      <p class="termosDeUso">Não possue uma conta? <a [routerLink]="['/cadastro'] ">Cadastre-se aqui!</a></p>
-    </form>
-    </ion-content>
+  </ion-grid>
+
+</ion-content>
