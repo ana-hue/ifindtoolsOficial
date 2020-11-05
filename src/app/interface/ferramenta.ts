@@ -1,5 +1,6 @@
 export interface Ferramenta {
-    nome: string,
+    nomeferramenta: string,
     dia: string,
-    preco: string
+    preco: string,
+    descricao: string
 }

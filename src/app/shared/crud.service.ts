@@ -16,9 +16,10 @@ export class CrudService {
 
   setFerramenta(ferramenta){
     const ferramentaData: Ferramenta = {
-      nome: ferramenta.nome,
+      nomeferramenta: ferramenta.nomeferramenta,
       dia: ferramenta.dia,
-      preco: ferramenta.preco
+      preco: ferramenta.preco,
+      descricao: ferramenta.descricao
     }
 
     return this.ngFirestore.collection("Ferramenta").add(ferramentaData);
@@ -26,9 +27,10 @@ export class CrudService {
 
   updateFerramenta(uid, ferramenta) {
     const ferramentaData: Ferramenta = {
-      nome: ferramenta.nome,
+      nomeferramenta: ferramenta.nomeferramenta,
       dia: ferramenta.dia,
-      preco: ferramenta.preco
+      preco: ferramenta.preco,
+      descricao: ferramenta.descricao
     }
     const ferramentaRef: AngularFirestoreDocument<any> = this.ngFirestore.doc("Ferramenta/" + uid);
     return ferramentaRef.update(ferramentaData);

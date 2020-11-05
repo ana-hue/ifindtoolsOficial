@@ -17,13 +17,8 @@
 </ion-header>
 
 <ion-content>
- 
   <!-- List of Sliding Items -->
   <ion-list>
-
-
-
-
 
     <ion-item *ngFor="let ferramenta of arrFerramentas; let i = index" [routerLink]="['../postagem']">
       <ion-avatar slot="start">
@@ -39,9 +34,12 @@
               <p>{{ ferramenta.dia }} Dias</p>
             </ion-col>
             <ion-col>
-              <p>R${{ ferramenta.preco }}</p>
+              <p>{{ ferramenta.preco }}</p>
               <ion-button color="danger" (click)="excluirDocinho(ferramenta.$key)">
       <ion-icon name="trash"></ion-icon>
+    </ion-button>
+    <ion-button [routerLink]="['../anuncio-edit', ferramenta.$key]" color="success">
+      <ion-icon name="create"></ion-icon>
     </ion-button>
             </ion-col>
           </ion-row>
@@ -50,71 +48,7 @@
       </ion-label>
     </ion-item>
 
-    <ion-item [routerLink]="['../postagem']">
-      <ion-avatar slot="start">
-        <img [routerLink]="['../usuario']"
-          src="https://vignette.wikia.nocookie.net/grandchase/images/a/a6/Grand_Chase_for_kakao_Amy_03.png/revision/latest?cb=20200116021207">
-      </ion-avatar>
-      <ion-label>
-        <h2>Juliana Martins</h2>
-        <h3>Furadeira</h3>
-        <ion-grid>
-          <ion-row>
-            <ion-col>
-              <p>2 Dias</p>
-            </ion-col>
-            <ion-col>
-              <p>R$20,00</p>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-
-      </ion-label>
-    </ion-item>
-
-    <ion-item [routerLink]="['../postagem']">
-      <ion-avatar slot="start">
-        <img [routerLink]="['../usuario']"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT3zw17OebPAoQHVvaytAfzyu2LDsPL0ZkogFu5ZahJjOenjfhx">
-      </ion-avatar>
-      <ion-label>
-        <h2>Ryan</h2>
-        <h3>Furadeira</h3>
-        <ion-grid>
-          <ion-row>
-            <ion-col>
-              <p>2 Dias</p>
-            </ion-col>
-            <ion-col>
-              <p>R$20,00</p>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-
-      </ion-label>
-    </ion-item>
-
-    <ion-item [routerLink]="['../postagem']">
-      <ion-avatar slot="start">
-        <img [routerLink]="['../usuario']"
-          src="https://66.media.tumblr.com/fe9cd65e0853cda1d40b711cac4e8bcf/tumblr_oz6m7cLowW1rjy578o3_250.png">
-      </ion-avatar>
-      <ion-label>
-        <h2>Sayori</h2>
-        <h3>Furadeira</h3>
-        <ion-grid>
-          <ion-row>
-            <ion-col>
-              <p>2 Dias</p>
-            </ion-col>
-            <ion-col>
-              <p>R$20,00</p>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-
-      </ion-label>
-    </ion-item>
+   
   </ion-list>
 
 

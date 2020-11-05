@@ -38,7 +38,13 @@ const routes: Routes = [
   {
     path: 'configuracao',
     loadChildren: () => import('./configuracao/configuracao.module').then( m => m.ConfiguracaoPageModule)
-  }];
+  },
+  {
+    path: 'anuncio-edit/:id',
+    loadChildren: () => import('./anuncio-edit/anuncio-edit.module').then( m => m.AnuncioEditPageModule)
+  }
+];
+
 
 @NgModule({
   imports: [

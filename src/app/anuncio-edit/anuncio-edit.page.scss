@@ -1,0 +1,49 @@
+.logoIfind {
+    margin-left: 12%;
+    margin-right: 5%;
+    width: 62%;
+}
+
+.cor {
+    min-width: 30px;
+    min-height: 30px;
+    margin-left: 5px;
+}
+
+ion-button {
+    margin-top: 30%;
+}
+
+input[type="file"] {
+    z-index: 0;
+    position: absolute;
+    top: 18px;
+    right: 10vw;
+    width: 150px;
+}
+input[type="file"]::-webkit-file-upload-button{
+    display: none;
+}
+.desc{
+    padding: 5px;   
+}
+.upload {
+    cursor: pointer;
+    text-align: center;
+    height: 45px;
+    display: flex;
+    width: 100px;
+    position: absolute;
+    left: 5vw;
+}
+.upload-area {
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    width: 100vw;
+    position: relative;
+}
+.upload ion-icon {
+    width: 40px;
+    height: 40px;;
+}
