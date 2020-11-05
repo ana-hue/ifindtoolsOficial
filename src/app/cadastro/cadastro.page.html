@@ -1,98 +1,36 @@
-<ion-header>
+<ion-content color="primary">
 
-  <ion-toolbar color="primary">
-    <ion-buttons slot="start">
-      <ion-menu-button class="cor"></ion-menu-button>
-    </ion-buttons>
+  <ion-grid class="grid">
     <img src="../assets/logos/logo.png" class="logo" />
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-<form class="content-cadastro">
-  <ion-grid>
     <ion-row>
+
       <ion-col>
-        <ion-item>
-          <ion-label position="floating">Nome Completo</ion-label>
-          <ion-input type="text" #nome required></ion-input>
-        </ion-item>
 
-        <ion-item>
-          <ion-label position="floating">Email</ion-label>
-          <ion-input type="text" #email ></ion-input>
+        <ion-item color="termosDeUso">
+          <ion-label position="floating">E-mail</ion-label>
+          <ion-input type="E-mail" #email required></ion-input>
         </ion-item>
 
 
-        <ion-grid>
-          <ion-row>
-            <ion-col>
-
-              <ion-item>
-                <ion-label position="floating">Estado</ion-label>
-
-                <ion-select interface="popover" #estado>
-                  <ion-select-option value="SC">SC</ion-select-option>
-                  <ion-select-option value="MG">MG</ion-select-option>
-                  <ion-select-option value="SP">SP</ion-select-option>
-                  <ion-select-option value="RJ">RJ</ion-select-option>
-                  <ion-select-option value="AM">AM</ion-select-option>
-                  <ion-select-option value="RR">RR</ion-select-option>
-                </ion-select>
-              </ion-item>
-            </ion-col>
-            <ion-col>
-
-              <ion-item>
-                <ion-label position="floating" >Genero</ion-label>
-                <ion-select interface="popover" #genero>
-                  <ion-select-option value="F">Feminino</ion-select-option>
-                  <ion-select-option value="M">Masculino</ion-select-option>
-                </ion-select>
-              </ion-item>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-
-        <ion-item>
-          <ion-label position="floating">Cidade</ion-label>
-          <ion-select interface="popover" #cidade>
-            <ion-select-option value="Joinville">Joinville</ion-select-option>
-            <ion-select-option value="Curitba">Curitiba</ion-select-option>
-            <ion-select-option value="São Francisco do Sul">São Franscisco Do Sul</ion-select-option>
-            <ion-select-option value="Caçador">Caçador</ion-select-option>
-            <ion-select-option value="Florianopolis">Florianopolis</ion-select-option>
-          </ion-select>
-        </ion-item>
-
-
-        <ion-item>
-          <ion-label position="stacked">Data Nascimento</ion-label>
-          <ion-input type="date" #datnasc ></ion-input>
-        </ion-item>
-
-        <ion-item>
+        <ion-item color="termosDeUso">
           <ion-label position="floating">Senha</ion-label>
-          <ion-input type="password" #password></ion-input>
+          <ion-input type="password" #password required></ion-input>
         </ion-item>
 
-        <ion-item>
+        <ion-item color="termosDeUso">
           <ion-label position="floating">Confirmar Senha</ion-label>
-          <ion-input type="password"></ion-input>
+          <ion-input type="password" #confirmar required></ion-input>
         </ion-item>
 
-        
-
-
-        <div>
-          <ion-button class="enviar" size="default" (click)="cadastro(nome, email, genero, password, cidade, estado, datnasc)" type="submit" expand="block"
-            color="dark">Proximo</ion-button>
-        </div>
+        <ion-button class="enviar" (click)="logIn(email, password, confirmar)" size="default" color="light"
+          expand="block" [routerLink]="['/tela-de-cadastro2'] ">
+         PROXIMO
+        </ion-button>
 
       </ion-col>
-    </ion-row>
-  </ion-grid>
-</form>
 
+    </ion-row>
+
+  </ion-grid>
 
 </ion-content>

@@ -1,15 +1,13 @@
-.logo {
-    max-width: 62%;
-     margin-left: 18%;
-}
-
-.termosDeUso, a {
+.grid {
     padding: 5px;
     font-size: 12px;
-    margin-top: 10%;
-    text-align: center;
+    margin-top: 40%;
 }
 
+.logo {
+    max-width: 62%;
+    margin-left: 18%;
+}
 
 ion-checkbox {
     margin-top: 15px;
@@ -21,9 +19,25 @@ ion-item {
 }
 
 .enviar {
-    margin-top: 5rem;
+    margin-top: 1rem;
 }
 
 ion-content {
     margin-top: 10%;
+}
+
+.esqueceuSenha {
+    padding: 5px;
+    font-size: 12px;
+    margin-top: -15px;
+    color: white;
+    float: left;
+}
+
+.botCadastro{
+    padding: 5px;
+    font-size: 12px;
+    margin-top: -15px;
+    color: white;
+    float: right;
 }

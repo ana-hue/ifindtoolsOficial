@@ -1,26 +1,44 @@
-
-.enviar {
-    margin-top: 2rem;
-}
-
-ion-item {
-    margin-top: 12px;
+.grid {
+    padding: 5px;
+    font-size: 12px;
+    margin-top: 40%;
 }
 
 .logo {
     max-width: 62%;
-     margin-left: 10%;
- 
+    margin-left: 18%;
 }
 
-.cor {
+ion-checkbox {
+    margin-top: 15px;
+    padding: 2px;
+}
+
+ion-item {
+    margin-top: 1rem;
+}
+
+.enviar {
+    margin-top: 1rem;
+    --border-radius: 200px;
+}
+
+ion-content {
+    margin-top: 10%;
+}
+
+.esqueceuSenha {
+    padding: 5px;
+    font-size: 12px;
+    margin-top: -15px;
     color: white;
+    float: left;
 }
 
-.certo {
-    color: green;
-}
-
-.errado {
-    color: red;
+.botCadastro{
+    padding: 5px;
+    font-size: 12px;
+    margin-top: -15px;
+    color: white;
+    float: right;
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../shared/auth.service';
 import { Usuario } from '../interface/usuario';
 import { Router } from '@angular/router';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-cadastro',
@@ -11,7 +12,8 @@ import { Router } from '@angular/router';
 export class CadastroPage implements OnInit {
 
   constructor(public authService: AuthService,
-              public router: Router) { }
+              public router: Router,
+              public menuCtrl: MenuController) { }
 
   ngOnInit() {
   }
@@ -37,6 +39,10 @@ export class CadastroPage implements OnInit {
     console.log(email.value);
     console.log(genero.value);
     this.router.navigate(["ferramenta"]);
+  }
+
+  ionViewWillEnter(){
+    this.menuCtrl.enable(false);
   }
 
 }
