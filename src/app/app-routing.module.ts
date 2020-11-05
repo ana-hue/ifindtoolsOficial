@@ -38,16 +38,7 @@ const routes: Routes = [
   {
     path: 'configuracao',
     loadChildren: () => import('./configuracao/configuracao.module').then( m => m.ConfiguracaoPageModule)
-  },  {
-    path: 'tela-de-cadastro2',
-    loadChildren: () => import('./tela-de-cadastro2/tela-de-cadastro2.module').then( m => m.TelaDeCadastro2PageModule)
-  },
-  {
-    path: 'tela-de-cadastro3',
-    loadChildren: () => import('./tela-de-cadastro3/tela-de-cadastro3.module').then( m => m.TelaDeCadastro3PageModule)
-  }
-
-];
+  }];
 
 @NgModule({
   imports: [

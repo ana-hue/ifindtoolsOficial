@@ -18,6 +18,11 @@ export class CadastroPage implements OnInit {
   ngOnInit() {
   }
 
+  onFormSubmit(form){
+    if(!form.valid)
+    return false;
+  }
+
 
   
   cadastro(nome, email, genero, password, cidade, estado, datnasc){
