@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../shared/auth.service';
 import { Router } from '@angular/router';
 import { MenuController } from '@ionic/angular';
+import { Usuario } from '../interface/usuario';
 
 @Component({
   selector: 'app-login',
@@ -14,11 +15,14 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {
   }
+     
+    
 
   logIn(email, password) {
+    
     this.authService.SignIn(email.value, password.value)
     .then((res) => {
-      this.router.navigate(["usuario"]);
+      this.router.navigate(["ferramenta"]);
       
     })
     .catch((error) => {
@@ -44,4 +48,6 @@ export class LoginPage implements OnInit {
   ionViewWillEnter(){
     this.menuCtrl.enable(false);
   }
+
+  
 }

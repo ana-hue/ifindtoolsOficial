@@ -38,7 +38,12 @@ const routes: Routes = [
   {
     path: 'configuracao',
     loadChildren: () => import('./configuracao/configuracao.module').then( m => m.ConfiguracaoPageModule)
-  }];
+  },
+  {
+    path: 'tela-azul',
+    loadChildren: () => import('./tela-azul/tela-azul.module').then( m => m.TelaAzulPageModule)
+  }
+];
 
 @NgModule({
   imports: [
