@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CrudService } from '../shared/crud.service';
 import { Ferramenta } from '../interface/ferramenta';
 import { AlertController } from '@ionic/angular';
+import { MenuController } from '@ionic/angular';
 
 
 @Component({
@@ -16,7 +17,8 @@ export class FerramentaPage implements OnInit {
 
 
   constructor(public crudService: CrudService,
-        public alertController: AlertController) { }
+        public alertController: AlertController,
+        public menuCtrl: MenuController) { }
 
 
 
@@ -61,6 +63,9 @@ export class FerramentaPage implements OnInit {
      await alert.present();
   }
   
+  ionViewWillEnter(){
+    this.menuCtrl.enable(true);
+  }
 
 }
 
