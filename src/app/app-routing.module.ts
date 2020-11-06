@@ -42,7 +42,11 @@ const routes: Routes = [
   {
     path: 'tela-azul',
     loadChildren: () => import('./tela-azul/tela-azul.module').then( m => m.TelaAzulPageModule)
+  },  {
+    path: 'tela-de-cadastro2',
+    loadChildren: () => import('./tela-de-cadastro2/tela-de-cadastro2.module').then( m => m.TelaDeCadastro2PageModule)
   }
+
 ];
 
 @NgModule({

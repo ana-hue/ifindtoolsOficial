@@ -14,30 +14,28 @@
 
       <ion-col>
 
-
         <ion-item color="termosDeUso">
-          <ion-label position="floating">Nome</ion-label>
-          <ion-input type="text" #nome required></ion-input>
+          <ion-label>Genero</ion-label>
+          <ion-select #genero required>
+            <ion-select-option value="M">Masculino</ion-select-option>
+            <ion-select-option value="F">Feminino</ion-select-option>
+            <ion-select-option value="O">Outros</ion-select-option>
+          </ion-select>
         </ion-item>
 
         <ion-item color="termosDeUso">
-          <ion-label position="floating">E-mail</ion-label>
-          <ion-input type="E-mail" #email required></ion-input>
+          <ion-label position="stacked">Data de Nascimento</ion-label>
+          <ion-input type="date" #dtnasc required></ion-input>
         </ion-item>
 
 
         <ion-item color="termosDeUso">
-          <ion-label position="floating">Senha</ion-label>
-          <ion-input type="password" #password required></ion-input>
-        </ion-item>
-
-        <ion-item color="termosDeUso">
-          <ion-label position="floating">Confirmar Senha</ion-label>
-          <ion-input type="password" #confirmar required></ion-input>
+          <ion-label position="floating">CEP</ion-label>
+          <ion-input type="text" #cep required></ion-input>
         </ion-item>
 
         <ion-button class="enviar" (click)="logIn(email, password, confirmar)" size="default" color="light"
-          expand="block" [routerLink]="['/tela-de-cadastro2'] ">
+          expand="block" [routerLink]="['/usuario'] ">
           PROXIMO
         </ion-button>
 
