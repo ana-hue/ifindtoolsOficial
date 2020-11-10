@@ -25,7 +25,8 @@ export class AnuncioPage implements OnInit {
     else {
       this.crudService.setFerramenta(form.value).then(res => {
         form.reset();
-        this.router.navigate(['/ferramenta']);
+        return this.presentAlert();
+        
 
       }).catch(error => console.log(error));
 
@@ -41,6 +42,7 @@ export class AnuncioPage implements OnInit {
     });
 
     await alert.present();
+    this.router.navigate(['/ferramenta']);
   }
 
 

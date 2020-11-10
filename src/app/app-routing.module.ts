@@ -42,7 +42,11 @@ const routes: Routes = [
   {
     path: 'anuncio-edit/:id',
     loadChildren: () => import('./anuncio-edit/anuncio-edit.module').then( m => m.AnuncioEditPageModule)
+  },  {
+    path: 'tela-de-cadastro2',
+    loadChildren: () => import('./tela-de-cadastro2/tela-de-cadastro2.module').then( m => m.TelaDeCadastro2PageModule)
   }
+
 ];
 
 

@@ -1,0 +1,58 @@
+<ion-content color="primary">
+  <form (ngSubmit)="onFormSubmit(form)" #form="ngForm">
+    <ion-grid class="grid">
+      <img src="../assets/logos/logo.png" class="logo" />
+      <ion-row>
+
+        <ion-col>
+
+          <ion-item color="termosDeUso">
+            <ion-label>Genero</ion-label>
+            <ion-select ngModel name="genero" required>
+              <ion-select-option value="M">Masculino</ion-select-option>
+              <ion-select-option value="F">Feminino</ion-select-option>
+              <ion-select-option value="O">Outros</ion-select-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item color="termosDeUso">
+            <ion-label position="stacked">Data de Nascimento</ion-label>
+            <ion-input type="date" ngModel name="datnasc" required></ion-input>
+          </ion-item>
+
+
+          <ion-item color="termosDeUso">
+            <ion-label>Estado</ion-label>
+
+            <ion-select required ngModel name="estado">
+              <ion-select-option value="SC">SC</ion-select-option>
+              <ion-select-option value="MG">MG</ion-select-option>
+              <ion-select-option value="SP">SP</ion-select-option>
+              <ion-select-option value="RJ">RJ</ion-select-option>
+              <ion-select-option value="AM">AM</ion-select-option>
+              <ion-select-option value="RR">RR</ion-select-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item color="termosDeUso">
+            <ion-label>Cidade</ion-label>
+            <ion-select interface="stacked" ngModel name="cidade">
+              <ion-select-option value="Joinville">Joinville</ion-select-option>
+              <ion-select-option value="Curitba">Curitiba</ion-select-option>
+              <ion-select-option value="São Francisco do Sul">São Franscisco Do Sul</ion-select-option>
+              <ion-select-option value="Caçador">Caçador</ion-select-option>
+              <ion-select-option value="Florianopolis">Florianopolis</ion-select-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-button type="submit" class="enviar" size="default" color="light" expand="block">
+            PROXIMO
+          </ion-button>
+
+        </ion-col>
+
+      </ion-row>
+
+    </ion-grid>
+  </form>
+</ion-content>

@@ -27,7 +27,7 @@
       </ion-avatar>
       <ion-label>
         <h2>Natsuki</h2>
-        <h3>{{ ferramenta.nome }}</h3>
+        <h3>{{ ferramenta.nomeferramenta }}</h3>
         <ion-grid>
           <ion-row>
             <ion-col>
@@ -36,11 +36,11 @@
             <ion-col>
               <p>{{ ferramenta.preco }}</p>
               <ion-button color="danger" (click)="excluirDocinho(ferramenta.$key)">
-      <ion-icon name="trash"></ion-icon>
-    </ion-button>
-    <ion-button [routerLink]="['../anuncio-edit', ferramenta.$key]" color="success">
-      <ion-icon name="create"></ion-icon>
-    </ion-button>
+                <ion-icon name="trash"></ion-icon>
+              </ion-button>
+              <ion-button [routerLink]="['../anuncio-edit', ferramenta.$key]" color="success">
+                <ion-icon name="create"></ion-icon>
+              </ion-button>
             </ion-col>
           </ion-row>
         </ion-grid>
@@ -48,7 +48,7 @@
       </ion-label>
     </ion-item>
 
-   
+
   </ion-list>
 
 

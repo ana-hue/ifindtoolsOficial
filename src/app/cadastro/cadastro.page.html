@@ -1,36 +1,42 @@
 <ion-content color="primary">
 
-  <ion-grid class="grid">
-    <img src="../assets/logos/logo.png" class="logo" />
-    <ion-row>
+  <form (ngSubmit)="onFormSubmit(form)" #form="ngForm">
 
-      <ion-col>
+    <ion-grid class="grid">
+      <img src="../assets/logos/logo.png" class="logo" />
+      <ion-row>
 
-        <ion-item color="termosDeUso">
-          <ion-label position="floating">E-mail</ion-label>
-          <ion-input type="E-mail" #email required></ion-input>
-        </ion-item>
+        <ion-col>
+
+          <ion-item color="termosDeUso">
+            <ion-label position="floating">E-mail</ion-label>
+            <ion-input type="E-mail" ngModel name="email" required></ion-input>
+          </ion-item>
+
+          <ion-item color="termosDeUso">
+            <ion-label position="floating">Nome</ion-label>
+            <ion-input type="E-mail" ngModel name="nome" required></ion-input>
+          </ion-item>
 
 
-        <ion-item color="termosDeUso">
-          <ion-label position="floating">Senha</ion-label>
-          <ion-input type="password" #password required></ion-input>
-        </ion-item>
+          <ion-item color="termosDeUso">
+            <ion-label position="floating">Senha</ion-label>
+            <ion-input type="password" ngModel name="senha" minlength="10" required></ion-input>
+          </ion-item>
 
-        <ion-item color="termosDeUso">
-          <ion-label position="floating">Confirmar Senha</ion-label>
-          <ion-input type="password" #confirmar required></ion-input>
-        </ion-item>
+          <ion-item color="termosDeUso">
+            <ion-label position="floating">Confirmar Senha</ion-label>
+            <ion-input type="password" ngModel name="confirmar" required></ion-input>
+          </ion-item>
 
-        <ion-button class="enviar" (click)="logIn(email, password, confirmar)" size="default" color="light"
-          expand="block" [routerLink]="['/tela-de-cadastro2'] ">
-         PROXIMO
-        </ion-button>
+          <ion-button type="submit" class="enviar" size="default" color="light" expand="block">
+            PROXIMO
+          </ion-button>
 
-      </ion-col>
+        </ion-col>
 
-    </ion-row>
+      </ion-row>
 
-  </ion-grid>
-
+    </ion-grid>
+  </form>
 </ion-content>

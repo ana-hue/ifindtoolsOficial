@@ -3,6 +3,7 @@ import { CrudService } from '../shared/crud.service';
 import { Ferramenta } from '../interface/ferramenta';
 import { AlertController } from '@ionic/angular';
 import { MenuController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -18,7 +19,8 @@ export class FerramentaPage implements OnInit {
 
   constructor(public crudService: CrudService,
         public alertController: AlertController,
-        public menuCtrl: MenuController) { }
+        public menuCtrl: MenuController,
+        public router: Router) { }
 
 
 
@@ -38,23 +40,29 @@ export class FerramentaPage implements OnInit {
 
   }
   async excluirDocinho(uid) {
+    this.router.navigate(['ferramenta']);
     const alert = await this.alertController.create({
+      
       header: "Vai excluir mesmo?",
-      message: "Após deletar vai ficar sem os docinhos, não havera volta!",
+      message: "Após deletar não havera volta!",
       buttons: [
           {
             text: 'Voltar',
             role: 'cancel',
-            cssClass: 'success'
+            cssClass: 'success',
+            handler: () => {
+              this.router.navigate(['ferramenta']);
+            }
           },
           {
             text: 'Deletar',
             handler: () => {
               this.crudService.removeFerramenta(uid);
+              this.router.navigate(['ferramenta']);
 
           
-            },
-            cssClass: 'danger'
+            }
+           
           }
 
       ]

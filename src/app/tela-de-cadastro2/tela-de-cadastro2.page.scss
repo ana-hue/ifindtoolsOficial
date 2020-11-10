@@ -1,7 +1,7 @@
 .grid {
     padding: 5px;
     font-size: 12px;
-    margin-top: 40%;
+    margin-top: 30%;
 }
 
 .logo {
@@ -20,6 +20,7 @@ ion-item {
 
 .enviar {
     margin-top: 1rem;
+    --border-radius: 200px;
 }
 
 ion-content {
@@ -32,7 +33,6 @@ ion-content {
     margin-top: -15px;
     color: white;
     float: left;
-    text-decoration: none;
 }
 
 .botCadastro{
@@ -41,5 +41,4 @@ ion-content {
     margin-top: -15px;
     color: white;
     float: right;
-    text-decoration: none;
 }

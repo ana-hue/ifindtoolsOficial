@@ -20,30 +20,11 @@ export class CadastroPage implements OnInit {
 
   onFormSubmit(form){
     if(!form.valid)
-    return false;
-  }
-
-
-  
-  cadastro(nome, email, genero, password, cidade, estado, datnasc){
-
-
-    
-    const userData: Usuario = {
-      nome: nome.value,
-      email: email.value,
-      genero: genero.value,
-      cidade: cidade.value,
-      estado: estado.value,
-      datnasc: datnasc.value
-     
+      return false;
+    else{
+      localStorage.setItem("cadastro_primeiro",JSON.stringify(form.value));
+      this.router.navigate(['/tela-de-cadastro2'])
     }
-
-    this.authService.RegisterUser(email.value, password.value, userData);
-    console.log(nome.value);
-    console.log(email.value);
-    console.log(genero.value);
-    this.router.navigate(["ferramenta"]);
   }
 
   ionViewWillEnter(){

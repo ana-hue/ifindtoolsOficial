@@ -17,7 +17,7 @@ export class AuthService {
       user => {
         if(user) {
           localStorage.setItem("usuario",JSON.stringify(user));
-          this.router.navigate(["usuario"]);
+          this.router.navigate(["ferramenta"]);
         }
         else {
           localStorage.setItem("usuario",null);
@@ -45,7 +45,7 @@ export class AuthService {
     return this.ngFireAuth.createUserWithEmailAndPassword(email, password).then((result) => {
 
     this.createUser(result.user.uid, usuario);
-
+    
     })
   }
 
@@ -60,7 +60,8 @@ export class AuthService {
       datnasc: usuario.datnasc
     }
 
-    return userRef.set(userData, { merge: true});
+    userRef.set(userData, { merge: true});
+    
   }
   
 } 
