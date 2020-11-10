@@ -18,7 +18,7 @@ export class LoginPage implements OnInit {
   logIn(email, password) {
     this.authService.SignIn(email.value, password.value)
     .then((res) => {
-      this.router.navigate(["usuario"]);
+      this.router.navigate(["ferramenta"]);
       
     })
     .catch((error) => {
