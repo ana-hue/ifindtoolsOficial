@@ -1,89 +1,86 @@
 <ion-header>
 
   <ion-toolbar color="primary">
-      <ion-buttons slot="start">
-        <ion-icon name="arrow-back" class="cor" [routerLink]="['/ferramenta']"></ion-icon>
-      <!-- <img src="../assets/icon/setinha.png" -->  
-      </ion-buttons>
-      <img src="../assets/logos/logo.png" class="logo"/>
-    </ion-toolbar>
-    
+    <ion-buttons slot="start">
+      <ion-icon name="arrow-back" class="cor" [routerLink]="['/ferramenta']"></ion-icon>
+      <!-- <img src="../assets/icon/setinha.png" -->
+    </ion-buttons>
+    <img src="../assets/logos/logo.png" class="logo" />
+  </ion-toolbar>
+
 </ion-header>
 
-<ion-content>
+<ion-content color="primary">
 
-  <ion-content>
-    
-    <form (ngSubmit)="onFormSubmit(form)" #form="ngForm">
-      <ion-grid>
+  <form (ngSubmit)="onFormSubmit(form)" #form="ngForm">
+    <ion-grid>
       <ion-row>
         <ion-col>
 
-          <ion-item>
-              <ion-label position="floating">Nome Ferramenta</ion-label>
-              <ion-input value="Furadeira 2k" ngModel name="nomeferramenta" required ></ion-input>
+          <ion-item color="primary">
+            <ion-label position="floating">Nome Ferramenta</ion-label>
+            <ion-input value="Furadeira 2k" ngModel name="nomeferramenta" required></ion-input>
           </ion-item>
-    
-          <ion-grid>
-              <ion-row>
-                <ion-col>
-                    <ion-item>
-                        <ion-label position="floating" >Preço</ion-label>
 
-                        <ion-select interface="popover" ngModel name="preco" required>
-                            <ion-select-option value="R$10,00">R$10,00</ion-select-option>
-                            <ion-select-option value="R$12,00">R$12,00</ion-select-option>
-                            <ion-select-option value="R$15,00">R$15,00</ion-select-option>
-                            <ion-select-option value="R$18,00">R$18,00</ion-select-option>
-                            <ion-select-option value="R$20,00">R$20,00</ion-select-option>
-                            <ion-select-option value="R$200,00">R$200,00</ion-select-option>
-                          </ion-select>
-                    </ion-item>
-                </ion-col>
-                <ion-col>
-                    <ion-item>
-                        <ion-label position="floating">Dias</ion-label>
-                        <ion-select interface="popover" ngModel name="dia" required>
-                            <ion-select-option value="1">1 Dias</ion-select-option>
-                            <ion-select-option value="2">2 Dias</ion-select-option>
-                            <ion-select-option value="3">3 Dias</ion-select-option>
-                            <ion-select-option value="4">4 Dias</ion-select-option>
-                            <ion-select-option value="5">5 Dias</ion-select-option>
-                            <ion-select-option value="6">6 Dias</ion-select-option>
-                          </ion-select>
-                    </ion-item>
-                  </ion-col>
-                </ion-row>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <ion-item color="primary">
+                  <ion-label position="floating">Preço</ion-label>
+
+                  <ion-select interface="popover" ngModel name="preco" required>
+                    <ion-select-option value="R$10,00">R$10,00</ion-select-option>
+                    <ion-select-option value="R$12,00">R$12,00</ion-select-option>
+                    <ion-select-option value="R$15,00">R$15,00</ion-select-option>
+                    <ion-select-option value="R$18,00">R$18,00</ion-select-option>
+                    <ion-select-option value="R$20,00">R$20,00</ion-select-option>
+                    <ion-select-option value="R$200,00">R$200,00</ion-select-option>
+                  </ion-select>
+                </ion-item>
+              </ion-col>
+              <ion-col>
+                <ion-item color="primary">
+                  <ion-label position="floating">Dias</ion-label>
+                  <ion-select interface="popover" ngModel name="dia" required>
+                    <ion-select-option value="1">1 Dias</ion-select-option>
+                    <ion-select-option value="2">2 Dias</ion-select-option>
+                    <ion-select-option value="3">3 Dias</ion-select-option>
+                    <ion-select-option value="4">4 Dias</ion-select-option>
+                    <ion-select-option value="5">5 Dias</ion-select-option>
+                    <ion-select-option value="6">6 Dias</ion-select-option>
+                  </ion-select>
+                </ion-item>
+              </ion-col>
+            </ion-row>
           </ion-grid>
 
 
-         
 
-          
-    
-          <ion-item class="desc">
-              <ion-textarea rows="4" ngModel name="descricao" placeholder="Deixa a descrição da sua ferramenta aqui..." minlength="20" required></ion-textarea>
-            </ion-item>
-    
-            <div class="upload-area">
-                <label class="upload" for="arquivo">
-                  <ion-icon name="folder-outline"></ion-icon>
-                  Escolher arquivos
-                </label>
-                <input id="arquivo" type="file">
-              </div>
-          
+
+
+
+          <ion-item class="desc" color="primary">
+            <ion-textarea rows="4" ngModel name="descricao" placeholder="Deixa a descrição da sua ferramenta aqui..."
+              minlength="20" required></ion-textarea>
+          </ion-item>
+
+          <div class="upload-area">
+            <label class="upload" for="arquivo">
+              <ion-icon name="folder-outline"></ion-icon>
+              Escolher arquivos
+            </label>
+            <input id="arquivo" type="file">
+          </div>
+
           <ion-button class="enviar" type="submit" size="default" color="dark" expand="block">Postar</ion-button>
-    
-          
-    
+
+
+
         </ion-col>
-    
-        
+
+
       </ion-row>
     </ion-grid>
-    
-  </form>
-    </ion-content>
 
+  </form>
 </ion-content>

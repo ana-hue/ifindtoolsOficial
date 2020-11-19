@@ -27,6 +27,7 @@
     "firebase": "^8.0.0",
     "git": "^0.1.5",
     "ngx-autosize": "^1.8.0",
+    "ngx-currency": "^2.5.2",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
