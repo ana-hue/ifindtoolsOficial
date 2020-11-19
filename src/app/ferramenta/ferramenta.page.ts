@@ -30,7 +30,7 @@ export class FerramentaPage implements OnInit {
     ferramentaRes.snapshotChanges().subscribe(
       res => {
         this.arrFerramentas = [];
-        res.forEach(item => {debugger;
+        res.forEach(item => {
           let ferramentaData = item.payload.doc.data();
           ferramentaData['$key'] = item.payload.doc.id;
 

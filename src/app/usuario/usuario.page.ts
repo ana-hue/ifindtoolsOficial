@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../shared/auth.service';
 import { MenuController } from "@ionic/angular";
-import { Usuario } from '../interface/usuario';
+
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { AngularFireAuth } from '@angular/fire/auth';
 
@@ -13,6 +13,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 export class UsuarioPage implements OnInit {
 
   emailusuario = "Email@";
+  
 
   constructor(public authService: AuthService, public menuController: MenuController,
               public ngFireAuth: AngularFireAuth,
@@ -20,7 +21,9 @@ export class UsuarioPage implements OnInit {
 
   ngOnInit() {
     this.emailusuario = this.authService.emailUser
+    
   }
+  
 
   
 

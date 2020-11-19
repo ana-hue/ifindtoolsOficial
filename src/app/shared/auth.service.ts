@@ -31,6 +31,11 @@ export class AuthService {
     return user.email;
   }
 
+  get ferramentaNome(): string{
+    const nomeferramenta = JSON.parse(localStorage.getItem("ferramenta"));
+    return nomeferramenta.name;
+  }
+
   SignIn(email, password) {
     return this.ngFireAuth.signInWithEmailAndPassword(email, password)
   }
@@ -61,6 +66,8 @@ export class AuthService {
     }
 
     userRef.set(userData, { merge: true});
+
+    
     
   }
   
