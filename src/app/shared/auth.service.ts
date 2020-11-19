@@ -26,6 +26,11 @@ export class AuthService {
     )
   }
 
+  getUsuarioList() {
+    const usuarioRef = this.ngFirestore.collection("Usuario");
+    return usuarioRef;
+  }
+
   get emailUser(): string{
     const user = JSON.parse(localStorage.getItem("usuario"));
     return user.email;

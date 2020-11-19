@@ -28,7 +28,7 @@ const routes: Routes = [
     loadChildren: () => import('./anuncio/anuncio.module').then( m => m.AnuncioPageModule)
   },
   {
-    path: 'usuario',
+    path: 'usuario/:id',
     loadChildren: () => import('./usuario/usuario.module').then( m => m.UsuarioPageModule)
   },
   {

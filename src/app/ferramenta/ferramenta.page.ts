@@ -4,6 +4,8 @@ import { Ferramenta } from '../interface/ferramenta';
 import { AlertController } from '@ionic/angular';
 import { MenuController } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { AuthService } from '../shared/auth.service';
+import { Usuario} from '../interface/usuario';
 
 
 @Component({
@@ -15,12 +17,14 @@ export class FerramentaPage implements OnInit {
 
 
   arrFerramentas = [];
+  arrUsuario = [];
 
 
   constructor(public crudService: CrudService,
         public alertController: AlertController,
         public menuCtrl: MenuController,
-        public router: Router) { }
+        public router: Router,
+        public authService: AuthService) { }
 
 
 
@@ -37,6 +41,8 @@ export class FerramentaPage implements OnInit {
           this.arrFerramentas.push(ferramentaData as Ferramenta);
         })
       })
+
+    
 
   }
   async excluirDocinho(uid) {

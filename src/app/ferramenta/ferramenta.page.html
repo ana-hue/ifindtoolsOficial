@@ -20,13 +20,13 @@
   <!-- List of Sliding Items -->
   <ion-list>
 
-    <ion-item *ngFor="let ferramenta of arrFerramentas; let i = index" [routerLink]="['../postagem', ferramenta.$key]">
+    <ion-item *ngFor="let ferramenta of arrFerramentas; let usuario of arrUsuario; let i = index" [routerLink]="['../postagem', ferramenta.$key]">
       <ion-avatar slot="start">
-        <img [routerLink]="['../usuario']"
+        <img [routerLink]="['../usuario', usuario.$key]"
           src="https://66.media.tumblr.com/21c4d24d8c814dc53e5534a57fa3130b/tumblr_p3bzmlI8sA1x2w1vno8_250.png">
       </ion-avatar>
       <ion-label>
-        <h2>Natsuki</h2>
+        <h2>Alguem 1</h2>
         <h3>{{ ferramenta.nomeferramenta }}</h3>
         <ion-grid>
           <ion-row>
