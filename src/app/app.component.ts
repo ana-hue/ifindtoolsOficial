@@ -20,21 +20,6 @@ export class AppComponent implements OnInit {
       icon: 'build'
     },
     {
-      title: 'Login',
-      url: 'login',
-      icon: 'people'
-    },
-    {
-      title: 'Cadastro',
-      url: '/cadastro',
-      icon: 'person-add'
-    },
-    {
-      title: 'Cadastrar CPF',
-      url: '/cadastrocartao',
-      icon: 'card'
-    },
-    {
       title: 'Postagem',
       url: '/postagem',
       icon: 'megaphone'

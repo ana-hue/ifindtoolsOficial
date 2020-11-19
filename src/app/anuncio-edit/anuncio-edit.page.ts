@@ -31,7 +31,7 @@ export class AnuncioEditPage implements OnInit {
       let dataFerramenta = res.data();
       this.ferramenta = dataFerramenta as Ferramenta; 
     })
-  }
+   }
 
 onFormSubmit(form) {
   if (!form.valid) {

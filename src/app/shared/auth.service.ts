@@ -26,9 +26,19 @@ export class AuthService {
     )
   }
 
+  getUsuarioList() {
+    const usuarioRef = this.ngFirestore.collection("Usuario");
+    return usuarioRef;
+  }
+
   get emailUser(): string{
     const user = JSON.parse(localStorage.getItem("usuario"));
     return user.email;
+  }
+
+  get ferramentaNome(): string{
+    const nomeferramenta = JSON.parse(localStorage.getItem("ferramenta"));
+    return nomeferramenta.name;
   }
 
   SignIn(email, password) {
@@ -61,6 +71,8 @@ export class AuthService {
     }
 
     userRef.set(userData, { merge: true});
+
+    
     
   }
   

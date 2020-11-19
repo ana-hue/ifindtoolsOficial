@@ -9,14 +9,16 @@
   </ion-avatar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-<div id="container">
-  <strong>{{ nome }}</strong>
-  <p>{{ emailusuario }}</p>
+<ion-content [fullscreen]="true" *ngFor="let usuario of arrUsuario; let i = index ">
+<div id="container" >
+ 
+  <h1>{{ usuario.nome }}</h1>
+  <p>{{ usuario.email }}</p>
   <div class="info">
-    <p>{{ datanasc }}</p>
-    <p>{{ genero }}</p>
+    <p>{{ usuario.datnasc }}</p>
+    <p>{{ usuario.genero }}</p>
     
+  
   </div>
   <div class="classificacao">
     <ion-icon name="star-outline"></ion-icon>

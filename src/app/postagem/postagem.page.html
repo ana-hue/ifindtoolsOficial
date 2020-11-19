@@ -18,23 +18,22 @@
 </ion-header>
 
 <ion-content>
-  <h2 class="post-title">Sem titulo</h2>
-  <p class="post-p">Proprietario(a): Sem Nome</p>
-  <p class="tempo">0 dias</p>
+  
+  <h2 class="post-title">{{ ferramenta.nomeferramenta }}</h2>
+  <p class="post-p">{{ emailusuario }}</p>
+  <p class="tempo">{{ ferramenta.dia }} dias</p>
   <div class="stts">
     <ul>
       <li>Disp</li>
     </ul>
-    <p class="price">R$0,00</p>
+    <p class="price">{{ ferramenta.preco }}</p>
     <p class="chat">Chat <ion-icon name="chatbubbles-outline"></ion-icon></p>
   </div>
   
   <div class="desc">
     <h4>Descrição</h4>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-       incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+     {{ ferramenta.descricao }}
     </p>
   </div>
 </ion-content>

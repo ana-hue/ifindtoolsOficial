@@ -58,16 +58,28 @@ div.info {
   justify-content: center;
   margin-top: 5px;
 }
+
+.info{ 
+  margin-bottom: 10px;
+}
+
 div.info p {
   width: 70px;
 }
 .classificacao ion-icon {
   margin-left: 3px;
   margin-right: 3px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 .classificacao {
   margin-top: 10px;
 }
+
+h1{
+  margin-top:3rem;
+}
+
 .allposts {
   background: #fff;
   position: absolute;
