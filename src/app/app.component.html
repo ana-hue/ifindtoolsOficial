@@ -4,10 +4,10 @@
       <ion-content>
 
         <ion-list id="inbox-list">
-          <ion-list-header>Menu</ion-list-header>
+          <ion-list-header color="primary">Menu</ion-list-header>
 
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
-            <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex == i">
+            <ion-item color="primary" (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex == i">
               <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
               <ion-label>{{ p.title }}</ion-label>
             </ion-item>
@@ -18,7 +18,7 @@
           
 
           <ion-menu-toggle auto-hide="false" *ngFor="let p of labels; let i = index">
-          <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" [class.selected]="selectedIndex == i"  lines="none">
+          <ion-item color="primary" (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" [class.selected]="selectedIndex == i"  lines="none">
             <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
             <ion-label>{{ p.title }}</ion-label>
           </ion-item>
@@ -28,7 +28,7 @@
 
         <ion-list>
             <ion-menu-toggle auto-hide="false">
-              <ion-item lines="none" (click)="logout()" routerDirection="root" detail="false">
+              <ion-item color="primary" lines="none" (click)="logout()" routerDirection="root" detail="false">
                 <ion-icon name="people" slot="start" [ios]="'log-out-outline'" [md]="'log-out-sharp'"></ion-icon>
                 <ion-label>Deslogar</ion-label>
               </ion-item>

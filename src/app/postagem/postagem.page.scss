@@ -55,7 +55,7 @@
 .desc {
     width: 95%;
     height: 200px;
-    background: #EDEDED;
+    background: var(--ion-color-dark-contrast);
     border-radius: 10px;
     margin: 20px auto;
 }
