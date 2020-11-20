@@ -1,15 +1,17 @@
 <ion-header>
-    <ion-toolbar color="primary">
-        <ion-buttons slot="start">
-          <ion-menu-button ></ion-menu-button>
-         
-              <img src="../assets/logos/logo.png" class="logoIfind"/>
-            
-        </ion-buttons>
-      </ion-toolbar>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      
+        <ion-icon name="arrow-back" class="cor" [routerLink]="['/ferramenta']"></ion-icon>
+      
 
-      
-      
+      <img src="../assets/logos/logo.png" class="logoIfind" />
+
+    </ion-buttons>
+  </ion-toolbar>
+
+
+
   <ion-toolbar class="header" color="primary">
     <div class="post-box">
       <img src="">
@@ -18,22 +20,22 @@
 </ion-header>
 
 <ion-content>
-  
+
+  <h2 *ngFor="let usuario of arrUsuario; let i = index">{{ usuario.nome }}</h2>
   <h2 class="post-title">{{ ferramenta.nomeferramenta }}</h2>
   <p class="post-p">{{ emailusuario }}</p>
   <p class="tempo">{{ ferramenta.dia }} dias</p>
   <div class="stts">
-    <ul>
-      <li>Disp</li>
-    </ul>
-    <p class="price">{{ ferramenta.preco }}</p>
-    <p class="chat">Chat <ion-icon name="chatbubbles-outline"></ion-icon></p>
-  </div>
   
+    <p class="price">{{ ferramenta.preco }}</p>
+    <p class="chat" [routerLink]="['../chat']" >Chat <ion-icon name="chatbubbles-outline"></ion-icon>
+    </p>
+  </div>
+
   <div class="desc">
     <h4>Descrição</h4>
     <p>
-     {{ ferramenta.descricao }}
+      {{ ferramenta.descricao }}
     </p>
   </div>
 </ion-content>

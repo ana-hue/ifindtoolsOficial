@@ -1,7 +1,7 @@
-.logoIfind {
-    margin-left: 12%;
-    margin-right: 5%;
-    width: 62%;
+
+ .logoIfind {
+    max-width: 62%;
+    margin-left: 10%;
 }
 
 .cor {
@@ -24,9 +24,6 @@ input[type="file"] {
 input[type="file"]::-webkit-file-upload-button{
     display: none;
 }
-.desc{
-    padding: 5px;   
-}
 .upload {
     cursor: pointer;
     text-align: center;
@@ -35,13 +32,19 @@ input[type="file"]::-webkit-file-upload-button{
     width: 100px;
     position: absolute;
     left: 5vw;
+    top: 5vw;
 }
 .upload-area {
+    top: 30px;
     text-align: center;
     align-items: center;
     align-content: center;
-    width: 100vw;
+    width: 300px;
+    height: 100px;
     position: relative;
+    border: solid;
+    border-width: 2px;
+    border-radius: 5%;
 }
 .upload ion-icon {
     width: 40px;

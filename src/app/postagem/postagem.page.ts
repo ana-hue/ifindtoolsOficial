@@ -5,6 +5,8 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { CrudService } from '../shared/crud.service';
 import { Platform } from '@ionic/angular';
 import { Ferramenta } from '../interface/ferramenta';
+import { Usuario } from '../interface/usuario';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-postagem',
@@ -13,8 +15,16 @@ import { Ferramenta } from '../interface/ferramenta';
 })
 export class PostagemPage implements OnInit {
 
-  emailusuario = "Email@";
-  nomeferramenta = "";
+  emailusuario = "";
+ usuario: Usuario = {
+  nome: "",
+  email: "",
+  genero: "",
+  cidade: "",
+  estado: "",
+  datnasc: ""
+ }
+ 
   id = "";
   ferramenta: Ferramenta = {
     nomeferramenta: "",
@@ -27,7 +37,8 @@ export class PostagemPage implements OnInit {
     public ngFireAuth: AngularFireAuth,
     public ngFirestore: AngularFirestore,
     public platform: Platform,
-    public crudService: CrudService) { }
+    public crudService: CrudService,
+    public menuCtrl: MenuController) { }
 
   ngOnInit() {
     this.emailusuario = this.authService.emailUser;
@@ -39,6 +50,14 @@ export class PostagemPage implements OnInit {
       let dataFerramenta = res.data();
       this.ferramenta = dataFerramenta as Ferramenta; 
     })
+
+    this.authService.getUsuarioList().doc(this.id).get().forEach( res => {
+      let dataUsuario = res.data();
+      this.usuario = dataUsuario as Usuario; 
+    })
   }
 
+  ionViewWillEnter(){
+    this.menuCtrl.enable(false);
+  }
 }

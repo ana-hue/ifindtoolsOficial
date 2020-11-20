@@ -9,14 +9,14 @@
 
 </ion-header>
 
-<ion-content>
+<ion-content color="primary">
 
   <form (ngSubmit)="onFormSubmit(form)" #form="ngForm">
     <ion-grid>
     <ion-row>
       <ion-col>
 
-        <ion-item>
+        <ion-item color="primary">
             <ion-label position="floating">Nome Ferramenta</ion-label>
             <ion-input value="Furadeira 2k" ngModel name="nomeferramenta" value="{{ferramenta.nomeferramenta}}" required ></ion-input>
         </ion-item>
@@ -24,7 +24,7 @@
         <ion-grid>
             <ion-row>
               <ion-col>
-                  <ion-item>
+                  <ion-item color="primary">
                       <ion-label position="floating" >Preço</ion-label>
 
                       <ion-select interface="popover" value="{{ferramenta.preco}}" ngModel name="preco" required>
@@ -38,7 +38,7 @@
                   </ion-item>
               </ion-col>
               <ion-col>
-                  <ion-item>
+                  <ion-item color="primary">
                       <ion-label position="floating">Dias</ion-label>
                       <ion-select interface="popover" value="{{ferramenta.dia}}" ngModel name="dia" required>
                           <ion-select-option value="1">1 Dias</ion-select-option>
@@ -53,7 +53,7 @@
               </ion-row>
         </ion-grid>
 
-        <ion-item class="desc">
+        <ion-item class="desc" color="primary">
             <ion-textarea rows="4" value="{{ferramenta.descricao}}" ngModel name="descricao" placeholder="Deixa a descrição da sua ferramenta aqui..." minlength="20" required></ion-textarea>
           </ion-item>
   

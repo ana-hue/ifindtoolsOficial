@@ -13,7 +13,7 @@ import { Usuario} from '../interface/usuario';
 })
 export class UsuarioPage implements OnInit {
 
-  emailusuario = "";
+ 
   arrUsuario = [];
 
   id = "";
@@ -32,14 +32,14 @@ export class UsuarioPage implements OnInit {
               public platform: Platform) { }
 
   ngOnInit() {
-    this.emailusuario = this.authService.emailUser;
+    
 
 
     let usuarioRes = this.authService.getUsuarioList();
     usuarioRes.snapshotChanges().subscribe(
       res => {
         this.arrUsuario = [];
-        res.forEach(item => {
+        res.forEach(item =>  {
           let usuarioData = item.payload.doc.data();
           usuarioData['$key'] = item.payload.doc.id;
 
