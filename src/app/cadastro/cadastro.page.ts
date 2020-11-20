@@ -51,7 +51,7 @@ export class CadastroPage implements OnInit {
     }
     else {
       localStorage.setItem("cadastro_primeiro", JSON.stringify(form.value));
-      this.router.navigate(['/tela-de-cadastro2'])
+      this.router.navigate(['/tela-cadastro2'])
     }
   }
 
