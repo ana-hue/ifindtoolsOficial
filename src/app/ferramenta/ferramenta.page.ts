@@ -17,6 +17,14 @@ export class FerramentaPage implements OnInit {
 
   arrFerramentas = [];
   arrFerramentasFilter = [];
+  id = "";
+  ferramenta: Ferramenta = {
+    nomeferramenta: "",
+    preco: "",
+    dia: "",
+    descricao: "",
+    usuario: JSON.parse(localStorage.getItem("cadastro_primeiro"))
+  }
 
   constructor(public crudService: CrudService,
     public alertController: AlertController,
@@ -32,7 +40,6 @@ export class FerramentaPage implements OnInit {
       res => {
         this.arrFerramentas = [];
         res.forEach(item => {
-          debugger;
           let ferramentaData = item.payload.doc.data();
           ferramentaData['$key'] = item.payload.doc.id;
 

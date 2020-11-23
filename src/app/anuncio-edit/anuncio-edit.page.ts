@@ -16,7 +16,8 @@ export class AnuncioEditPage implements OnInit {
     nomeferramenta: "",
     preco: "",
     dia: "",
-    descricao: ""
+    descricao: "",
+    usuario: JSON.parse(localStorage.getItem("cadastro_primeiro"))
   }
 
   constructor(public platform: Platform,
