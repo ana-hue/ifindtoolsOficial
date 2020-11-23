@@ -19,7 +19,8 @@ export class CrudService {
       nomeferramenta: ferramenta.nomeferramenta,
       dia: ferramenta.dia,
       preco: ferramenta.preco,
-      descricao: ferramenta.descricao
+      descricao: ferramenta.descricao,
+      usuario: JSON.parse(localStorage.getItem("cadastro_primeiro"))
     }
 
     return this.ngFirestore.collection("Ferramenta").add(ferramentaData);
@@ -30,7 +31,8 @@ export class CrudService {
       nomeferramenta: ferramenta.nomeferramenta,
       dia: ferramenta.dia,
       preco: ferramenta.preco,
-      descricao: ferramenta.descricao
+      descricao: ferramenta.descricao,
+      usuario: JSON.parse(localStorage.getItem("cadastro_primeiro"))
     }
     const ferramentaRef: AngularFirestoreDocument<any> = this.ngFirestore.doc("Ferramenta/" + uid);
     return ferramentaRef.update(ferramentaData);
