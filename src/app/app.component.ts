@@ -19,12 +19,6 @@ export class AppComponent implements OnInit {
       url: '/ferramenta',
       icon: 'build'
     },
-    
-    {
-      title:'Configurações',
-      icon: 'cog',
-      url: '/configuracao'
-    },
     {
       title: 'Publicar',
       icon: 'create',
@@ -45,6 +39,17 @@ export class AppComponent implements OnInit {
     public router: Router
   ) {
     this.initializeApp();
+  }
+
+  onToggleColorTheme(event) {
+    
+    if(event.detail.checked){
+      document.body.setAttribute('color-theme', 'dark' );
+     
+    } else {
+      document.body.setAttribute('color-theme', 'light' );
+     
+    }
   }
 
   initializeApp() {
