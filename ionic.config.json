@@ -1,7 +1,5 @@
 {
   "name": "ifindtools",
-  "integrations": {
-    "cordova": {}
-  },
+  "integrations": {},
   "type": "angular"
 }

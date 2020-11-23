@@ -46,7 +46,11 @@ const routes: Routes = [
   {
     path: 'tela-de-cadastro2',
     loadChildren: () => import('./tela-de-cadastro2/tela-de-cadastro2.module').then( m => m.TelaDeCadastro2PageModule)
+  },  {
+    path: 'termos',
+    loadChildren: () => import('./termos/termos.module').then( m => m.TermosPageModule)
   }
+
 
 ];
 

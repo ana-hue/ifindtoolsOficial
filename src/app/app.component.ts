@@ -19,24 +19,21 @@ export class AppComponent implements OnInit {
       url: '/ferramenta',
       icon: 'build'
     },
-    {
-      title: 'Postagem',
-      url: '/postagem',
-      icon: 'megaphone'
-    }, {
-      title: 'Usuario',
-      url: '/usuario',
-      icon: 'person'
-    },
+    
     {
       title:'Configurações',
       icon: 'cog',
       url: '/configuracao'
     },
     {
+      title: 'Publicar',
+      icon: 'create',
+      url: '/anuncio'
+    },
+    {
       title:'Termos de Uso',
       icon:'book',
-      url: '/ferramenta'
+      url: '/termos'
     }
   ];
   
