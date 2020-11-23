@@ -26,9 +26,14 @@ export class AppComponent implements OnInit {
       url: '/configuracao'
     },
     {
+      title: 'Publicar',
+      icon: 'create',
+      url: '/anuncio'
+    },
+    {
       title:'Termos de Uso',
       icon:'book',
-      url: '/ferramenta'
+      url: '/termos'
     }
   ];
   
