@@ -1,9 +1,9 @@
 <ion-header>
   <ion-toolbar color="primary">
     <ion-buttons slot="start">
-      
-        <ion-icon name="arrow-back" class="cor" [routerLink]="['/ferramenta']"></ion-icon>
-      
+
+      <ion-icon name="arrow-back" class="cor" [routerLink]="['/ferramenta']"></ion-icon>
+
 
       <img src="../assets/logos/logo.png" class="logoIfind" />
 
@@ -21,13 +21,14 @@
 
 <ion-content>
 
-  <h2 class="post-title">{{ ferramenta.usuario.nome }}</h2>
+  <h2 class="post-title">{{ ferramenta.nomeferramenta }}</h2>
+  <p class="post-title">{{ ferramenta.usuario.nome }}</p>
   <p class="post-p">{{ emailusuario }}</p>
   <p class="tempo">{{ ferramenta.dia }} dias</p>
   <div class="stts">
-  
+
     <p class="price">{{ ferramenta.preco }}</p>
-    <p class="chat" [routerLink]="['../chat']" >Chat <ion-icon name="chatbubbles-outline"></ion-icon>
+    <p class="chat" [routerLink]="['../chat']">Chat <ion-icon name="chatbubbles-outline"></ion-icon>
     </p>
   </div>
 
