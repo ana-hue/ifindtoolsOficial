@@ -12,6 +12,10 @@ const routes: Routes = [
     loadChildren: () => import('./ferramenta/ferramenta.module').then( m => m.FerramentaPageModule)
   },
   {
+    path: 'chat',
+    loadChildren: () => import('./chat/chat.module').then( m => m.ChatPageModule)
+  },
+  {
     path: 'cadastro',
     loadChildren: () => import('./cadastro/cadastro.module').then( m => m.CadastroPageModule)
   },
@@ -46,7 +50,8 @@ const routes: Routes = [
   {
     path: 'tela-de-cadastro2',
     loadChildren: () => import('./tela-de-cadastro2/tela-de-cadastro2.module').then( m => m.TelaDeCadastro2PageModule)
-  },  {
+  },
+  {
     path: 'termos',
     loadChildren: () => import('./termos/termos.module').then( m => m.TermosPageModule)
   }
