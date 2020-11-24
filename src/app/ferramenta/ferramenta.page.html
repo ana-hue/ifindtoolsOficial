@@ -1,66 +1,65 @@
 <ion-header>
 
-  <ion-toolbar color="primary">
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-  </ion-toolbar>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+    </ion-toolbar>
 
-  <ion-toolbar color="primary">
-    <img src="../assets/logos/logo.png" class="logoIfind" />
-  </ion-toolbar>
+    <ion-toolbar color="primary">
+        <img src="../assets/logos/logo.png" class="logoIfind" />
+      </ion-toolbar>
 
-  <ion-toolbar color="primary">
-    <ion-searchbar type="text" (ionChange)="search($event)" clearInput animated class="pesquisar" placeholder="Pesquisar"></ion-searchbar>
-  </ion-toolbar>
+    <ion-toolbar color="primary">
+        <ion-searchbar type="text" (ionChange)="search($event)" clearInput animated class="pesquisar" placeholder="Pesquisar"></ion-searchbar>
+    </ion-toolbar>
 
 </ion-header>
 
 <ion-content>
-  <!-- List of Sliding Items -->
-  <ion-list>
+    <!-- List of Sliding Items -->
+    <ion-list>
 
-    <ion-item *ngFor="let ferramenta of arrFerramentas; let usuario of arrUsuario; let i = index" [routerLink]="['../postagem', ferramenta.$key]">
-      <ion-avatar slot="start">
-        <img [routerLink]="['../usuario', usuario.$key]"
-          src="https://scontent.fbnu3-1.fna.fbcdn.net/v/t1.0-1/cp0/p64x64/92456148_2580609742213605_2556847946033266688_o.jpg?_nc_cat=111&ccb=2&_nc_sid=dbb9e7&_nc_ohc=u6SnIIe1bI0AX_tvny_&_nc_ht=scontent.fbnu3-1.fna&tp=27&oh=b11fa2a82fdc7e6bf97ac5acc10a4897&oe=5FDF39D2">
-      </ion-avatar>
-      <ion-label>
-        <h2>{{ ferramenta.usuario.nome }}</h2>
-        <h3>{{ ferramenta.nomeferramenta }}</h3>
-        <ion-grid>
-          <ion-row>
-            <ion-col>
-              <p>{{ ferramenta.dia }} Dias</p>
-            </ion-col>
-            <ion-col>
-              <p>{{ ferramenta.preco }}</p>
-              <ion-button color="danger" (click)="excluirDocinho(ferramenta.$key)">
-                <ion-icon name="trash"></ion-icon>
-              </ion-button>
-              <ion-button [routerLink]="['../anuncio-edit', ferramenta.$key]" color="success">
-                <ion-icon name="create"></ion-icon>
-              </ion-button>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
+        <ion-item *ngFor="let ferramenta of arrFerramentas; let usuario of arrUsuario; let i = index" [routerLink]="['../postagem', ferramenta.$key]">
+            <ion-avatar slot="start">
+                <img [routerLink]="['../usuario', usuario.$key]" src="https://scontent.fbnu3-1.fna.fbcdn.net/v/t1.0-1/cp0/p64x64/92456148_2580609742213605_2556847946033266688_o.jpg?_nc_cat=111&ccb=2&_nc_sid=dbb9e7&_nc_ohc=u6SnIIe1bI0AX_tvny_&_nc_ht=scontent.fbnu3-1.fna&tp=27&oh=b11fa2a82fdc7e6bf97ac5acc10a4897&oe=5FDF39D2">
+            </ion-avatar>
+            <ion-label>
+                <h2>{{ ferramenta.usuario.nome }}</h2>
+                <h3>{{ ferramenta.nomeferramenta }}</h3>
+                <ion-grid>
+                    <ion-row>
+                        <ion-col>
+                            <p>{{ ferramenta.dia }} Dias</p>
+                        </ion-col>
+                        <ion-col>
+                            <p>{{ ferramenta.preco }}</p>
+                            <ion-button color="danger" (click)="excluirDocinho(ferramenta.$key)">
+                                <ion-icon name="trash"></ion-icon>
+                            </ion-button>
+                            <ion-button [routerLink]="['../anuncio-edit', ferramenta.$key]" color="success">
+                                <ion-icon name="create"></ion-icon>
+                            </ion-button>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
 
-      </ion-label>
-    </ion-item>
-
-
-  </ion-list>
+            </ion-label>
+        </ion-item>
 
 
-  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button [routerLink]="['/anuncio'] ">
-      <ion-icon name="brush"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
+    </ion-list>
 
-  <ion-infinite-scroll>
-    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Carregando...">
-    </ion-infinite-scroll-content>
-  </ion-infinite-scroll>
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button [routerLink]="['/anuncio'] ">
+            <ion-icon name="brush"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+
+    <ion-infinite-scroll>
+        <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Carregando...">
+        </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
 
 </ion-content>
